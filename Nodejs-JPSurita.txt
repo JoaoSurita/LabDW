@@ -1,0 +1,22 @@
+Node.js
+
+Node.js basicamente é um ambiente de execução JavaScript Open-Source e multiplataforma. É uma ferramenta versátil para quase todo tipo de projeto.
+
+Ele possui um excelente desempenho. Pois executa o mecanismo JS V8 fora do Navegador.
+
+Um app desenvolvido em Node.js, é executado em um único processo, sem a necessidade de criar uma nova thread para cada requisição, assim o tornando bem leve.
+
+Quando o Node.js realiza uma operação de Entrada/Saída, como acessar um banco de dados ou o sistema de arquivos, ao invés de bloquear a thread e descartar ciclos de Processador esperando. ele retorna as operações somente após de receber as mesmas.
+E isso permite que o Node.js lide com diversas conexões ao mesmo tempo em um único servidor sem a necessidade de gerenciar a concorrência de Threads de um Processador, o que poderia ocasionar em diversos Bugs.
+
+Uma das vantagens de utilizar Node.js, é que diversos desenvolvedores front-end, que utilizam a linguagem JavaScript, podem desenvolver códigos no back-end facilmente, pois como ja estão familiarizados com o JavaScript, não terá o trabalho de aprender uma linguagem do zero.
+
+Como o Node.js é um ambiente de execução JavaScript assíncrono e orientado a eventos, ele foi projetado para cirar aplicações de rede escaláveis.
+
+Utilizando o NPM (Node Package Manager), o node permite instalar diversas ferramentas e bibliotecas prontas utilizando o comando "npm install" acelerando o desenvolvimento de um projeto.
+
+Por trás de todo o comportamento assíncrono e orientado a eventos do Node.js está a biblioteca Libuv (escrita em C). É ela que gerencia o Event Loop, a camada de rede do sistema operacional e o Thread Pool, permitindo que o Node.js execute operações pesadas (como leitura de arquivos e criptografia) em segundo plano sem travar a thread principal onde o seu código JavaScript é executado.
+
+O desenvolvimento profissional em Node.js é fortemente baseado em TypeScript para garantir tipagem estática e maior segurança em larga escala, utilizando executores modernos como tsx ou ts-node.
+
+Além do tradicional NPM, o mercado adota amplamente alternativas de alta performance e suporte nativo a monorepos, como Yarn, pnpm e o Bun.
