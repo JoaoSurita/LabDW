@@ -1,0 +1,19 @@
+comando para iniciar projeto: npm init -y
+
+No package.json, no "type", trocar o "common" por "module"(Se não tiver type, pode adicionar)
+
+Instalar: express, mongoose, cors, dotenv -> npm install ...
+
+Instalar para desenvolvimento: nodemon -> npm install --save-dev ... ou npm install -D ...
+
+Para subir o projeto, deletar a pasta "node_modules" ou fazer um arquivo .gitignore. Para reinstalar, digitar o comando npm install ou npm i
+
+-- Desenvolvimento
+
+Criar arquivo index.js
+
+Criar arquivo conn.js na pasta db
+
+Criar um arquivo na pasta Models
+
+Criar um arquivo na pasta Controllers
