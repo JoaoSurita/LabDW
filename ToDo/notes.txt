@@ -37,3 +37,29 @@ Alterar o index inserindo o Swagger
 
 Para subir o Backend:
 npm start
+
+-- Frontend
+
+Gerar Frontend:
+Na pasta raiz do projeto(ToDo) executar comando: npm create vite@latest Frontend
+
+Processo para geração:
+◇  Package name:
+│  frontend
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Which linter to use?
+│  ESLint
+│
+◇  Install with npm and start now?
+│  Yes
+
+Como o React roda na porta 5173, alterar no index a porta 3000 para a porta do React
+
+Gerar Tailwindcss:
+Na pasta Frontend, executar comando: npm install tailwindcss @tailwindcss/vite
