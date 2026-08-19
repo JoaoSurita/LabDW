@@ -63,3 +63,42 @@ Como o React roda na porta 5173, alterar no index a porta 3000 para a porta do R
 
 Gerar Tailwindcss:
 Na pasta Frontend, executar comando: npm install tailwindcss @tailwindcss/vite
+
+Instalar para o Frontend:
+react-router-dom e axios
+
+npm install react-router-dom axios
+
+Baixar arquivos disponíveis no Classroom:
+Criar pastas Pages e Components no Frontend/src
+Salvar TodoItem em Components
+Salvar TodoForm e TodoList em Pages
+Substituir App.jsx
+Salvar logo-todo.png em assets
+
+Apagar app.css
+
+Apagar código do index.css e importar tailwind: @import "tailwindcss"
+
+Alterar vite.config.js:
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite';
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(),tailwindcss()],
+})
+
+Apagar imagens da pasta public e de assets, deixando apenas logo-todo.png
+
+Alterar index.html
+
+Alterar main.jsx
+
+Alterar a porta do Backend no index.js para 5173(Igual ao Frontend)
+
+Dentro de src, criar a pasta "api"
+Criar um arquivo Todo.jsx
+
+Alterar TodoForm.jsx
