@@ -17,7 +17,7 @@ export default function TodoForm() {
             await createTodos({titulo, descricao, dataLimite, situacao})
             //navigate("/")
         } catch (error) {
-            alert("Erro ao Criar Tarefa" + (error.message) || error )
+            alert("Erro ao Criar Tarefa" + (error.message || error))
         }
         finally {
             setSaving(false);

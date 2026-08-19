@@ -36,7 +36,7 @@ export default class TarefaController {
             });
         } catch (error) {
             return res.status(500).json({
-                message: "Problema ao buscar tarefas". tarefas
+                message: "Problema ao buscar tarefas", tarefas
             })
         }
     } // Fim getAll

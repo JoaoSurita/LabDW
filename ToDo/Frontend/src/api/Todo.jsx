@@ -6,5 +6,5 @@ const api = axios.create({
     }
 })
 export const getTodos=()=>api.get("/getAll")
-export const createTodos=()=>api.post("/create")
+export const createTodos=(dados)=>api.post("/create", dados) // Alterado para enviar os dados como corpo da requisição
 export default api
