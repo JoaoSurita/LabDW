@@ -102,3 +102,7 @@ Dentro de src, criar a pasta "api"
 Criar um arquivo Todo.jsx
 
 Alterar TodoForm.jsx
+
+Alterar TodoList.jsx
+
+Remova os comentários referentes a TodoList no arquivo App.jsx
