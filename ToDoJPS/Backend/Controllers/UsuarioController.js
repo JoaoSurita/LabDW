@@ -39,7 +39,7 @@ export default class UsuarioController {
         }
         try {
             // Consulta o banco para encontrar o Usuário para logar
-            const usuario = await Usuario.findOne(email).select("+senha");
+            const usuario = await Usuario.findOne({ email }).select("+senha");
             if (!usuario) {
                 return res.status(400).json({ message: "Credenciais Inválidas" })
             }
@@ -55,12 +55,12 @@ export default class UsuarioController {
                 nome: usuario.nome,
                 email: usuario.email
             };
-            const token = jwt.sign(tokenPayLoad, JWT_SECRET, { expiresIn: "1h" })
+            const token = jwt.sign(tokenPayLoad, process.env.JWT_SECRET, { expiresIn: "1h" })
             res.cookie("token", token, {
                 httpOnly: true, // evita acesso por script JS
                 secure: "false", // tornar true em produção exige https
                 sameSite: "lax",// comunicação entre front e back
-                maxAge: JWT_EXPIRATION_MS || 3600000 // 1h
+                maxAge: 3600000 // 1h
             });
             return res.status(200).json({
                 message: "Login efetuado com sucesso",

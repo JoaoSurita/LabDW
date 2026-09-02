@@ -141,3 +141,5 @@ App.jsx
 Inserindo Sistema de Login no UsuarioController
 
 Editar index.js
+
+Caso não aparecer o Método de Login, rode o comando "npm run swagger" na pasta Backend
