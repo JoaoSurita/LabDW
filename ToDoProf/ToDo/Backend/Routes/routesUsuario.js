@@ -9,5 +9,6 @@ routesUsuario.post("/logout", UsuarioController.Logout);
 routesUsuario.post("/resetPassword", UsuarioController.ResetPassword);
 routesUsuario.post("/forgotPassword", UsuarioController.ForgotPassword);
 routesUsuario.get("/me", UserMiddleware, UsuarioController.Profile);
+routesUsuario.get("/getAllUsers", UserMiddleware, UsuarioController.getAllExceptLogged)
 
 export default routesUsuario;

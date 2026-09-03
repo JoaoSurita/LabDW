@@ -14,5 +14,6 @@ export const  logout=()=>api.post("/logout");
 export const  reset=(payload)=>api.post("/resetPassword", payload);
 export const  forgot=(payload)=>api.post("/forgotPassword", payload);
 export const  getProfile = () => api.get("/me");
+export const  getUsers = () => api.get("/getAllUsers");
 
 export default api;

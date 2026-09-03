@@ -216,5 +216,16 @@ export default class UsuarioController
         return res.status(500).json({ message: "Erro ao buscar usuário", error: error.message });
     }
     }
-    
+    static async getAllExceptLogged(req, res) {
+        try {
+            const usuarioLogado = req.user.id;
+            const usuarios = await Usuario.find({_id:{$ne:usuarioLogado}})
+            .select("nome")
+            .sort({nome:1});
+            return res.status(200).json(usuarios);
+        }
+        catch(error){
+            return res.status(500).json({message:"Problema ao buscar usuários", error})
+        }
+    }
 };
