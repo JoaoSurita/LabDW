@@ -4,6 +4,8 @@ import LandingPage from "./Pages/LandingPage";
 import TodoList from "./Pages/TodoList";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import ForgotPassword from "./Pages/ForgotPassword";
+import ResetPassword from "./Pages/ResetPassword";
 import TodoForm from "./Pages/TodoForm";
 import logoTodo from "./assets/logo-todo.png";
 import { logout, getProfile } from "./api/Todo.jsx";
@@ -125,6 +127,18 @@ export default function App() {
                   path="register"
                   element={
                     isAuthenticated ? <Navigate to="/todos" replace /> : <Register />
+                  }
+                />
+                <Route
+                  path="forgot"
+                  element={
+                    isAuthenticated ? <Navigate to="/todos" replace /> : <ForgotPassword />
+                  }
+                />
+                <Route
+                  path="reset"
+                  element={
+                    isAuthenticated ? <Navigate to="/todos" replace /> : <ResetPassword />
                   }
                 />
               </Routes>
