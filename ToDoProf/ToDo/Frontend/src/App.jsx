@@ -3,6 +3,7 @@ import { Routes, Route, Link, useNavigate, Navigate } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
 import TodoList from "./Pages/TodoList";
 import Login from "./Pages/Login";
+import Register from "./Pages/Register";
 import TodoForm from "./Pages/TodoForm";
 import logoTodo from "./assets/logo-todo.png";
 import { logout, getProfile } from "./api/Todo.jsx";
@@ -12,7 +13,7 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  
+
   useEffect(() => {
     const checkUserSession = async () => {
       try {
@@ -42,7 +43,7 @@ export default function App() {
     }
   };
 
-  
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -53,14 +54,14 @@ export default function App() {
 
   return (
     <Routes>
-      
+
       <Route
         path="/"
         element={
           isAuthenticated ? <Navigate to="/todos" replace /> : <LandingPage />
         }
       />
-     <Route
+      <Route
         path="/*"
         element={
           <div className="min-h-screen bg-gray-50 p-6">
@@ -73,24 +74,24 @@ export default function App() {
                 </h1>
 
                 <div className="flex items-center gap-4">
-  {isAuthenticated && (
-    <>
-      <Link
-        to="/todos"
-        className="text-sm font-medium text-gray-600 hover:text-gray-900"
-      >
-        Tarefas
-      </Link>
-      <button
-        onClick={handleLogout}
-        className="px-3 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors cursor-pointer"
-      >
-        Sair
-      </button>
-    </>
-  )}
-</div>
-</nav>
+                  {isAuthenticated && (
+                    <>
+                      <Link
+                        to="/todos"
+                        className="text-sm font-medium text-gray-600 hover:text-gray-900"
+                      >
+                        Tarefas
+                      </Link>
+                      <button
+                        onClick={handleLogout}
+                        className="px-3 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors cursor-pointer"
+                      >
+                        Sair
+                      </button>
+                    </>
+                  )}
+                </div>
+              </nav>
             </header>
 
             <main className="max-w-3xl mx-auto">
@@ -118,6 +119,12 @@ export default function App() {
                         navigate("/todos");
                       }} />
                     )
+                  }
+                />
+                <Route
+                  path="register"
+                  element={
+                    isAuthenticated ? <Navigate to="/todos" replace /> : <Register />
                   }
                 />
               </Routes>
