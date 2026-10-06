@@ -5,6 +5,6 @@ const routesTarefa = new Router();
 
 routesTarefa.post("/create", UserMiddleware, TarefaController.Create);
 routesTarefa.get("/getAll", UserMiddleware, TarefaController.getAll);
-routesTarefa.patch("/updateSituacao/:id", UserMiddleware, TarefaController.UpdateSituacao);
+routesTarefa.put("/updateSituacao/:id", UserMiddleware, TarefaController.UpdateSituacao);
 
 export default routesTarefa;
